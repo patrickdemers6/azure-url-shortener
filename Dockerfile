@@ -6,5 +6,6 @@ RUN npm ci --only=production
 
 COPY . .
 
-EXPOSE 8080
+ENV PORT 8080
+EXPOSE $ENV
 CMD [ "node", "index.js" ]
